@@ -1,19 +1,36 @@
-
-resolver: nightly-2023-11-21
-allow-newer: true
+user-message: "WARNING: This stack project is generated."
 
 flags:
   liquid-fixpoint:
     devel: true 
+    link-z3-as-a-library: true
 
+resolver: nightly-2023-11-25
+
+# We have 1 packages.
 packages:
-- '.'
+  - ./.
 
+# We have 0 source packages listed in this order:
+#   * external 0
+#   * internal 0
+#   * external forks 0
+#   * internal forks 0
 extra-deps:
-- rest-rewrite-0.4.1
-- smtlib-backends-0.3
-- smtlib-backends-z3-0.3
-- smtlib-backends-process-0.3
 
-nix:
-  packages: [z3]
+  # Source Packages, external (3rd party).
+
+  # Source Packages, internal to this organisation (private and public).
+
+  # Source Packages, external (3rd party) forks of other repositories.
+  # Can we help upstream?
+
+  # Source Packages, internal forks of other repositories.
+  # Can we upstream and unfork?
+
+  # Package versions for published packages either not on Stackage or
+  # not matching the version on Stackage for the resolver we use.
+  # These package-version extra dependencies are equivalent to cabal constraints.
+  - smtlib-backends-0.3@rev:1
+  - smtlib-backends-process-0.3@rev:1
+  - smtlib-backends-z3-0.3@rev:1
