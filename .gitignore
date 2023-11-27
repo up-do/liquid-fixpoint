@@ -35,3 +35,5 @@ Session.vim
 *.hie
 stan.html
 .bin/stan
+.updo
+updo
