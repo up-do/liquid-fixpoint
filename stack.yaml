@@ -1,5 +1,4 @@
-
-resolver: nightly-2024-01-26
+user-message: "WARNING: This stack project is generated."
 
 flags:
   liquid-fixpoint:
@@ -9,21 +8,15 @@ flags:
 #   z3 library to be at the linker's reach.
 #   link-z3-as-a-library: true
 
+resolver: nightly-2024-05-25
+
 packages:
-- '.'
+  - ./.
 
 extra-deps:
-- rest-rewrite-0.4.2
-- smtlib-backends-0.3@rev:2
-- smtlib-backends-process-0.3@rev:2
-- smtlib-backends-z3-0.3.1
-- store-0.7.18
-- store-core-0.4.4.6
-
-allow-newer: true
-allow-newer-deps:
-  - rest-rewrite
-  - store-core
-
-nix:
-  packages: [z3]
+  - rest-rewrite-0.4.3
+  - smtlib-backends-0.3@rev:2
+  - smtlib-backends-process-0.3@rev:2
+  - smtlib-backends-z3-0.3.1
+  - store-0.7.18
+  - store-core-0.4.4.7
